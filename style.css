@@ -655,8 +655,10 @@ input.sidenote-toggle {
 /* Two-panel layout container */
 .two-panel-container {
   display: flex;
-  gap: 2rem;
+  flex-wrap: wrap; /* Ensures panels stack on smaller screens */
+  gap: 2rem;       /* Space between the panels */
   margin-top: 2rem;
+  position: relative; /* Enables positioning for the vertical line */
 }
 
 /* Left Panel */
@@ -676,15 +678,31 @@ input.sidenote-toggle {
   padding: 1rem;
 }
 
+/* Vertical line between the panels */
+.two-panel-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 30%;            /* Position the line based on the left panel's max-width */
+  width: 1px;           /* Thickness of the line */
+  background-color: var(--table-border-color); /* Use the same color as the border */
+  margin-left: 1rem;    /* Adjust for the gap between panels */
+}
+
 /* Ensure responsiveness */
 @media (max-width: 768px) {
   .two-panel-container {
-    flex-direction: column;
+    flex-direction: column; /* Stack panels vertically on smaller screens */
+  }
+
+  .two-panel-container::before {
+    display: none; /* Hide the vertical line in stacked layout */
   }
 
   .left-panel,
   .right-panel {
-    max-width: 100%;
+    max-width: 100%; /* Expand panels to full width in vertical layout */
   }
 }
 /* ------------------------------------------------------------------------ */
