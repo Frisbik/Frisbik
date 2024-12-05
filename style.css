@@ -185,7 +185,7 @@ body {
   font-family: 'Latin Modern', Georgia, Cambria, 'Times New Roman', Times, serif;
   line-height: 1.8;
 
-  max-width: 200ch;
+  max-width: 100ch;
   min-height: 100vh;
   overflow-x: hidden;
   margin: 0 auto;
@@ -649,6 +649,47 @@ input.sidenote-toggle {
 .footnotes {
   border-top: 1px solid var(--footnotes-border-color);
 }
+
+/* ------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------ */
+/* Two-panel layout container */
+.two-panel-container {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Left Panel */
+.left-panel {
+  flex: 1;
+  max-width: 30%;
+  padding: 1rem;
+  background-color: var(--body-bg-color);
+  border: 1px solid var(--table-border-color);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Right Panel */
+.right-panel {
+  flex: 2;
+  padding: 1rem;
+}
+
+/* Ensure responsiveness */
+@media (max-width: 768px) {
+  .two-panel-container {
+    flex-direction: column;
+  }
+
+  .left-panel,
+  .right-panel {
+    max-width: 100%;
+  }
+}
+/* ------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------ */
+
 
 /* Center title and paragraph */
 .abstract,
