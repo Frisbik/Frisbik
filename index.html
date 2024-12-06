@@ -69,6 +69,10 @@
     background-color: var(--table-border-color);
   }
 
+  .collapsible-text {
+    white-space: normal; /* Ensure text respects line breaks */
+  }
+
   /* Icon Style */
   .icon {
     font-size: 1.2rem;
@@ -170,15 +174,17 @@
     <!-- Collapsible Button with Icon -->
     <button class="collapsible">
       <span class="icon">+</span>
-        <ptitle>
-          Better Approximation for Weighted k-Matroid Intersection
-        </ptitle>
-        [<a href="https://arxiv.org/abs/2411.19366" style="color: #38761d ">arXiv</a>]
-          <br>
-          with
-          <author><a href="https://netabobeta.github.io/" style="color: #38761d ">Neta Singer</a></author>.
-          <br>
-          <em> Submitted </em>
+        <span class="collapsible-text"></span>
+            <ptitle>
+              Better Approximation for Weighted k-Matroid Intersection
+            </ptitle>
+            [<a href="https://arxiv.org/abs/2411.19366" style="color: #38761d ">arXiv</a>]
+              <br>
+              with
+              <author><a href="https://netabobeta.github.io/" style="color: #38761d ">Neta Singer</a></author>.
+              <br>
+              <em> Submitted </em>
+          </span>
     </button>
     <!-- Abstract -->
     <div class="content">
