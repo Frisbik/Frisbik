@@ -43,42 +43,54 @@
 		font-weight: bolder;
   }
 
-/* Collapsible Button */
-.collapsible {
-  background-color: var(--body-bg-color);
-  color: var(--body-color);
-  cursor: pointer;
-  padding: 1rem;
-  width: 100%;
-  border: 1px solid var(--table-border-color);
-  border-radius: 5px;
-  text-align: left;
-  outline: none;
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
-  transition: background-color 0.3s ease;
-}
+  /* Collapsible Button */
+  .collapsible {
+    background-color: var(--body-bg-color);
+    color: var(--body-color);
+    cursor: pointer;
+    padding: 1rem;
+    width: 100%;
+    border: 1px solid var(--table-border-color);
+    border-radius: 5px;
+    text-align: left;
+    outline: none;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    display: flex; /* Align icon and text */
+    align-items: center;
+    justify-content: space-between; /* Icon on the right */
+    transition: background-color 0.3s ease;
+  }
 
-.collapsible:hover {
-  background-color: var(--table-border-color);
-}
+  .collapsible:hover {
+    background-color: var(--table-border-color);
+  }
 
-/* Content Area (Hidden by Default) */
-.content {
-  padding: 0 1rem;
-  display: none;
-  overflow: hidden;
-  border-left: 3px solid var(--table-border-color);
-  border-radius: 0 0 5px 5px;
-  background-color: #f9f9f9;
-  margin-bottom: 1rem;
-}
+  /* Icon Style */
+  .icon {
+    font-size: 1.2rem;
+    transition: transform 0.3s ease; /* Smooth rotation for toggling */
+  }
 
-.content p {
-  margin: 1rem 0;
-}
+  /* Rotate the icon when active */
+  .collapsible.active .icon {
+    transform: rotate(45deg); /* Changes "+" to "×" or rotates chevron */
+  }
 
+  /* Content Area (Hidden by Default) */
+  .content {
+    padding: 0 1rem;
+    display: none;
+    overflow: hidden;
+    border-left: 3px solid var(--table-border-color);
+    border-radius: 0 0 5px 5px;
+    background-color: #f9f9f9;
+    margin-bottom: 1rem;
+  }
 
+  .content p {
+    margin: 1rem 0;
+  }
 </style>
 <meta name="google-site-verification" content="xTMoxPTmN_69F2CX32tUoXYpwacrNhe5C3fEC5Can_4" />
 
@@ -90,10 +102,15 @@
       button.addEventListener('click', function () {
         this.classList.toggle('active');
         const content = this.nextElementSibling;
+        const icon = this.querySelector('.icon');
+
+        // Toggle content visibility
         if (content.style.display === 'block') {
           content.style.display = 'none';
+          icon.textContent = '+'; // Collapse icon
         } else {
           content.style.display = 'block';
+          icon.textContent = '×'; // Expand icon
         }
       });
     });
@@ -148,12 +165,17 @@
 <p>
 
   <div class="collapsible-container">
-    <button class="collapsible">Publication 1: Title of the Paper</button>
+    <!-- Collapsible Button with Icon -->
+    <button class="collapsible">
+      <span class="icon">+</span> Publication 1: Title of the Paper
+    </button>
     <div class="content">
-      <p>This is the abstract of the publication. It describes the key findings and contributions...</p>
+      <p>This is the abstract of the first publication. It describes the key findings and contributions...</p>
     </div>
 
-    <button class="collapsible">Publication 2: Another Paper Title</button>
+    <button class="collapsible">
+      <span class="icon">+</span> Publication 2: Another Paper Title
+    </button>
     <div class="content">
       <p>This is the abstract of the second publication. It explains...</p>
     </div>
@@ -188,7 +210,7 @@
         <thesis>
           Approximation Algorithms for Independence Systems
         </thesis>
-	      [<a href="https://qmro.qmul.ac.uk/xmlui/handle/123456789/90376" style="color: #38761d "> Link </a>]
+	      [<a href="https://qmro.qmul.ac.uk/xmlui/handle/123456789/90376" style="color: #38761d ">Link</a>]
         <br>
         <conference>Ph.D. Thesis</conference>
   </p>
@@ -228,7 +250,7 @@
       <br>
       with
       <author><a href="https://www.qmul.ac.uk/maths/profiles/wardj.html" style="color: #38761d">Justin Ward</a></author>,
-      <author><a href="https://www.di.ens.fr/~cchuang/" style="color: #38761d">Chien Chung-Huang</a></author>.
+      <author><a href="https://www.di.ens.fr/~cchuang/" style="color: #38761d">Chien-Chung Huang</a></author>.
       <br>
       <conference>APPROX 2020</conference>.
 </p>
