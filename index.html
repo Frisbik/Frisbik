@@ -48,7 +48,7 @@
     background-color: var(--body-bg-color);
     color: var(--body-color);
     cursor: pointer;
-    padding: 1rem;
+    padding: 0rem;
     width: 100%;
     border: 1px solid var(--table-border-color);
     border-radius: 5px;
@@ -60,6 +60,8 @@
     align-items: center;
     justify-content: flex-start; /* Icon on the right */
     gap: 1rem;        /* Add space between icon and text */
+    flex-wrap: wrap; /* Ensures the text wraps correctly */
+    white-space: normal; /* Allows breaking within the text */
     transition: background-color 0.3s ease;
   }
 
