@@ -86,7 +86,10 @@
 
   /* Content Area (Hidden by Default) */
   .content {
-    padding: 0 1rem;
+    padding: 1rem;
+    width: 90%;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
     display: none;
     overflow: hidden;
     border-left: 3px solid var(--table-border-color);
@@ -170,6 +173,8 @@
 <hr>
 <h3> Publications: </h3>
 
+  <!----------------- Article 6 --------------------->
+  <!----------------- --------- --------------------->
   <div class="collapsible-container">
     <!-- Collapsible Button with Icon -->
     <button class="collapsible">
@@ -195,6 +200,154 @@
         Our key innovation lies in a randomized reduction in which we solve almost unweighted instances iteratively. This perspective allows us to use insights from the unweighted problem for which Lee, Sviridenko, and Vondrák have designed a k/2-approximation algorithm. We analyze this procedure by constructing refined matroid exchanges and leveraging randomness to avoid bad local minima.
       </span>
     </div>
+  <!----------------- --------- --------------------->
+  <!----------------- --------- --------------------->
+
+  <!----------------- Article 5 --------------------->
+  <!----------------- --------- --------------------->
+    <!-- Collapsible Button with Icon -->
+    <button class="collapsible">
+      <span class="icon">+</span>
+        <span class="collapsible-text">
+            <ptitle>
+              Better Approximation for Weighted k-Matroid Intersection
+            </ptitle>
+            [<a href="https://arxiv.org/abs/2411.19366" style="color: #38761d ">arXiv</a>]
+              <br>
+              with
+              <author><a href="https://netabobeta.github.io/" style="color: #38761d ">Neta Singer</a></author>.
+              <br>
+              <em> Submitted </em>
+          </span>
+    </button>
+    <!-- Abstract -->
+    <div class="content">
+      <span class="collapsible-text">
+        For any &epsilon; &geq; 0, we prove that k-Dimensional Matching is hard to approximate within a factor of Omega(k/(12 + &epsilon)); for large k unless  NP &subseteq; BPP. Listed in Karp's 21 NP-complete problems, k-Dimensional Matching is a benchmark computational complexity problem which we find as a special case of many constrained optimization problems over independence systems including: k-Set Packing, k-Matroid Intersection, and Matroid k-Parity.
+        <br>
+        For all the aforementioned problems, the best known lower bound was a \Omega(k / \ln (k))-hardness by Hazan, Safra, and Schwartz. In contrast, state-of-the-art algorithms achieved an approximation of O(k).
+        Our result narrows down this gap to a constant and thus provides a rationale for the observed algorithmic difficulties. The crux of our result hinges on a novel approximation preserving gadget from $R$-degree bounded k-CSPs over alphabet size R to kR-Dimensional Matching. Along the way, we prove that R-degree bounded k-CSPs over alphabet size R are hard to approximate within a factor \Omega_k(R) using known randomised sparsification methods for CSPs.
+      </span>
+    </div>
+    <!----------------- --------- --------------------->
+    <!----------------- --------- --------------------->
+
+  <!----------------- Article 4 --------------------->
+  <!----------------- --------- --------------------->
+    <button class="collapsible">
+      <span class="icon">+</span>
+        <span class="collapsible-text">
+            <ptitle>
+              Better Approximation for Weighted k-Matroid Intersection
+            </ptitle>
+            [<a href="https://arxiv.org/abs/2411.19366" style="color: #38761d ">arXiv</a>]
+              <br>
+              with
+              <author><a href="https://netabobeta.github.io/" style="color: #38761d ">Neta Singer</a></author>.
+              <br>
+              <em> Submitted </em>
+          </span>
+    </button>
+    <!-- Abstract -->
+    <div class="content">
+      <span class="collapsible-text">
+        In this thesis, we study three maximization problems over independence systems:
+        <br>
+        • Weighted k-Set Packing is a fundamental combinatorial optimization problem that captures matching problems in graphs and hypergraphs. For over 20 years Berman’s algorithm stood as the state-of-the-art approximation algorithm for this problem, until Neuwohner’s recent improvements. Our focus is on the value $k = 3$ which is well motivated from theory and practice, and for which improvements are arguably the hardest. We largely improve upon her approximation, by giving an algorithm that yields state-of-the-art results. Our techniques are simple and naturally expand upon Berman’s analysis. Our analysis holds for any value of \(k\) with greater improvements over Berman’s result as k grows.
+        <br>
+        • Chapter 3 – We continue the study of the weighted k-set packing problem. Building on Chapter 2, we reach the tightest approximation factor possible for k = 3, and k \geq 7  using our techniques. As a consequence, we improve over all the results in Chapter 2. In particular, we obtain \sqrt{3}, and k/2-approximation for k = 3   and k \geq 7 respectively. Our result for k \geq 7  is in fact analogous to that of Hurkens and Schrijver who obtained the same approximation factor for the unweighted problem.
+        <br>
+        • Chapter 4 – We present improved multipass streaming algorithms for maximizing monotone and arbitrary submodular functions over independence systems. Our result demonstrates that the simple local-search algorithm for maximizing a monotone submodular function can be efficiently simulated using a few passes over the dataset. Our results improve the number of passes needed compared to the state-of-the-art.
+        <br>
+        • Chapter 5 – We conclude the thesis by presenting improved approximation algorithms for Sparse Least-Square Estimation, Bayesian A-optimal Design, and Column Subset Selection over a matroid constraint. At the heart of this chapter is the demonstration of a new property that considered applications satisfy. We call it: \beta-weak submodularity. We leverage this property to derive new algorithms with strengthened guarantees. The notion of \beta-weak submodularity is of independent interest and we believe that it will have further use in machine learning and statistics.
+      </span>
+    </div>
+    <!----------------- --------- --------------------->
+    <!----------------- --------- --------------------->
+
+  <!----------------- Article 3 --------------------->
+  <!----------------- --------- --------------------->
+  <button class="collapsible">
+    <span class="icon">+</span>
+      <span class="collapsible-text">
+          <ptitle>
+            Better Approximation for Weighted k-Matroid Intersection
+          </ptitle>
+          [<a href="https://arxiv.org/abs/2411.19366" style="color: #38761d ">arXiv</a>]
+            <br>
+            with
+            <author><a href="https://netabobeta.github.io/" style="color: #38761d ">Neta Singer</a></author>.
+            <br>
+            <em> Submitted </em>
+        </span>
+  </button>
+  <!-- Abstract -->
+  <div class="content">
+    <span class="collapsible-text">
+      We consider the weighted k-set packing problem, in which we are given a collection of weighted sets, each with at most k elements and must return a collection of pairwise disjoint sets with maximum total weight. For k = 3, this problem generalizes the classical 3-dimensional matching problem listed as one of the Karp's original 21 NP-complete problems. We give an algorithm attaining an approximation factor of 1.786 for 3-Set Packing, improving on the recent best result of due to Neuwohner.
+
+      Our algorithm is based on the local search procedure of Berman that attempts to improve the sum of squared weights rather than the problem's objective. When using exchanges of size at most $k$, this algorithm attains an approximation factor of. Using exchanges of size k^2(k -1) +k, we provide a relatively simple analysis to obtain an approximation factor of 1.811 when k = 3. We then show that the tools we develop can be adapted to larger exchanges of size 2 k^2(k — 1) + k to give an approximation factor of 1.786. Although our primary focus is on the case k = 3, our approach in fact gives slightly stronger improvements on the factor for all k > 3. As in previous works, our guarantees hold also for the more general problem of finding a maximum weight independent set in a k+1-claw free graph.
+    </span>
+  </div>
+  <!----------------- --------- --------------------->
+  <!----------------- --------- --------------------->
+
+  <!----------------- Article 2 --------------------->
+  <!----------------- --------- --------------------->
+  <button class="collapsible">
+    <span class="icon">+</span>
+      <span class="collapsible-text">
+          <ptitle>
+            Better Approximation for Weighted k-Matroid Intersection
+          </ptitle>
+          [<a href="https://arxiv.org/abs/2411.19366" style="color: #38761d ">arXiv</a>]
+            <br>
+            with
+            <author><a href="https://netabobeta.github.io/" style="color: #38761d ">Neta Singer</a></author>.
+            <br>
+            <em> Submitted </em>
+        </span>
+  </button>
+  <!-- Abstract -->
+  <div class="content">
+    <span class="collapsible-text">
+      We study the following problem: Given a variable of interest, we would like to find a best linear predictor for it by choosing a subset of k relevant variables obeying a matroid constraint. This problem is a natural generalization of subset selection problems where it is necessary to spread observations amongst multiple different classes. We derive new, strengthened guarantees for this problem by improving the analysis of the residual random greedy algorithm and by developing a novel distorted local-search algorithm.
+      <br>
+      To quantify our approximation guarantees, we refine the definition of weak submodularity by Das and Kempe (2011) and introduce the notion of an upper submodularity ratio, which we connect to the minimum $k$-sparse eigenvalue of the covariance matrix. More generally, we look at the problem of maximizing a set function $f$ with lower and upper submodularity ratio \gamma and \beta under a matroid constraint. For this problem, our algorithms have asymptotic approximation guarantee 1/2 and 1 - 1/e as the function is closer to being submodular. As a second application, we show that the Bayesian A-optimal design objective falls into our framework, leading to new guarantees for this problem as well.
+    </span>
+  </div>
+  <!----------------- --------- --------------------->
+  <!----------------- --------- --------------------->
+
+  <!----------------- Article 1 --------------------->
+  <!----------------- --------- --------------------->
+  <button class="collapsible">
+    <span class="icon">+</span>
+      <span class="collapsible-text">
+          <ptitle>
+            Better Approximation for Weighted k-Matroid Intersection
+          </ptitle>
+          [<a href="https://arxiv.org/abs/2411.19366" style="color: #38761d ">arXiv</a>]
+            <br>
+            with
+            <author><a href="https://netabobeta.github.io/" style="color: #38761d ">Neta Singer</a></author>.
+            <br>
+            <em> Submitted </em>
+        </span>
+  </button>
+  <!-- Abstract -->
+  <div class="content">
+    <span class="collapsible-text">
+      We give improved multi-pass streaming algorithms for the problem of maximizing a monotone or arbitrary non-negative submodular function subject to a general p-matchoid constraint in the model in which elements of the ground set arrive one at a time in a stream. The family of constraints we consider generalizes both the intersection of p arbitrary matroid constraints and p-uniform hypergraph matching. For monotone submodular functions, our algorithm attains a guarantee of \(p+1+\varepsilon\,\,\) using \(O(p/\varepsilon\)\)-passes and requires storing only O(k) elements, where k is the maximum size of feasible solution. This immediately gives an O(1/\varepsilon)-pass (2+\varepsilon)-approximation algorithms for monotone submodular maximization in a matroid and (3+\varepsilon)-approximation for monotone submodular matching.
+      <br>
+      Our algorithm is oblivious to the choice ε and can be stopped after any number of passes, delivering the appropriate guarantee. We extend our techniques to obtain the first multi-pass streaming algorithm for general, non-negative submodular functions subject to a p-matchoid constraint with a number of passes independent of the size of the ground set and k. We show that a randomized O(p/\varepsilon)-pass algorithm storing O(p^3 k \log(k)/\varepsilon^3)$ elements gives a (p+1+\gamma + \varepsilon)-approximation, where \gamma is the guarantee of the best-known offline algorithm for the same problem.
+    </span>
+  </div>
+  <!----------------- --------- --------------------->
+  <!----------------- --------- --------------------->
+
+
+</div>
 
   <p>
         <ptitle>
