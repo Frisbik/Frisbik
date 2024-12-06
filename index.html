@@ -29,7 +29,7 @@
 	font-family: "Helvetica", "Arial", sans-serif;
     }
 
- 	author{color: #38761d;}
+  author{color: #38761d;}
   conference { font-weight: bold; }
   ptitle {
 		color: #4d8093;
@@ -43,9 +43,63 @@
 		font-weight: bolder;
   }
 
+/* Collapsible Button */
+.collapsible {
+  background-color: var(--body-bg-color);
+  color: var(--body-color);
+  cursor: pointer;
+  padding: 1rem;
+  width: 100%;
+  border: 1px solid var(--table-border-color);
+  border-radius: 5px;
+  text-align: left;
+  outline: none;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.collapsible:hover {
+  background-color: var(--table-border-color);
+}
+
+/* Content Area (Hidden by Default) */
+.content {
+  padding: 0 1rem;
+  display: none;
+  overflow: hidden;
+  border-left: 3px solid var(--table-border-color);
+  border-radius: 0 0 5px 5px;
+  background-color: #f9f9f9;
+  margin-bottom: 1rem;
+}
+
+.content p {
+  margin: 1rem 0;
+}
+
 
 </style>
 <meta name="google-site-verification" content="xTMoxPTmN_69F2CX32tUoXYpwacrNhe5C3fEC5Can_4" />
+
+<!-- Script pour le menu déroulant -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const collapsibles = document.querySelectorAll('.collapsible');
+    collapsibles.forEach((button) => {
+      button.addEventListener('click', function () {
+        this.classList.toggle('active');
+        const content = this.nextElementSibling;
+        if (content.style.display === 'block') {
+          content.style.display = 'none';
+        } else {
+          content.style.display = 'block';
+        }
+      });
+    });
+  });
+</script>
+
 </head>
 
 
@@ -92,13 +146,28 @@
 <hr>
 <h3> Publications: </h3>
 <p>
+
+  <div class="collapsible-container">
+    <button class="collapsible">Publication 1: Title of the Paper</button>
+    <div class="content">
+      <p>This is the abstract of the publication. It describes the key findings and contributions...</p>
+    </div>
+
+    <button class="collapsible">Publication 2: Another Paper Title</button>
+    <div class="content">
+      <p>This is the abstract of the second publication. It explains...</p>
+    </div>
+  </div>
+
+
         <ptitle>
             Better Approximation for Weighted k-Matroid Intersection
 	      </ptitle>
 	      [<a href="https://arxiv.org/abs/2411.19366" style="color: #38761d ">arXiv</a>]
             <br>
             with
-	          <author><a href="https://netabobeta.github.io/" style="color: #38761d ">Neta Singer</a></author>
+	          <author><a href="https://netabobeta.github.io/" style="color: #38761d ">Neta Singer</a></author>.
+            <br>
             <em> Submitted </em>
         </p>
 
@@ -110,7 +179,8 @@
         <br>
         with
 	      <author><a href="https://web.eecs.umich.edu/~euiwoong/" style="color: #38761d ">Euiwoong Lee</a></author>,
-        <author><a href="https://theory.epfl.ch/osven/" style="color: #38761d">Ola Svensson</a></author>
+        <author><a href="https://theory.epfl.ch/osven/" style="color: #38761d">Ola Svensson</a></author>.
+        <br>
 	      <em> Submitted </em>
         </p>
 
@@ -119,6 +189,8 @@
           Approximation Algorithms for Independence Systems
         </thesis>
 	      [<a href="https://qmro.qmul.ac.uk/xmlui/handle/123456789/90376" style="color: #38761d "> Link </a>]
+        <br>
+        <conference>Ph.D. Thesis</conference>
   </p>
 
 	<p>
@@ -126,10 +198,11 @@
           An Improved Approximation for Maximum Weighted k-Set Packing
 	      </ptitle>
 	      [<a href="https://doi.org/10.1137/1.9781611977554.ch42" style="color: #38761d ">Conf</a>,
-         <a href="https://arxiv.org/abs/2301.07537" style="color: #38761d ">arXiv</a> ]
+         <a href="https://arxiv.org/abs/2301.07537" style="color: #38761d ">arXiv</a>]
         <br>
         with
-	      <author><a href="https://www.qmul.ac.uk/maths/profiles/wardj.html" style="color: #38761d">Justin Ward</a></author>,
+	      <author><a href="https://www.qmul.ac.uk/maths/profiles/wardj.html" style="color: #38761d">Justin Ward</a></author>.
+        <br>
 	      <conference>SODA 2023</conference>.
   </p>
 
@@ -141,7 +214,8 @@
             <a href="https://arxiv.org/abs/2102.09644" style="color: #38761d ">arXiv</a>]
             <br>
             with
-    <author><a href="https://www.qmul.ac.uk/maths/profiles/wardj.html" style="color: #38761d">Justin Ward</a></author>,
+    <author><a href="https://www.qmul.ac.uk/maths/profiles/wardj.html" style="color: #38761d">Justin Ward</a></author>.
+    <br>
     <conference>COLT 2022</conference>.
 </p>
 
@@ -153,9 +227,10 @@
       <a href="https://arxiv.org/abs/2102.09679" style="color: #38761d ">arXiv</a>]
       <br>
       with
-<author><a href="https://www.qmul.ac.uk/maths/profiles/wardj.html" style="color: #38761d">Justin Ward</a></author>,
-<author><a href="https://www.di.ens.fr/~cchuang/" style="color: #38761d">Chien Chung-Huang</a></author>
-<conference>APPROX 2020</conference>.
+      <author><a href="https://www.qmul.ac.uk/maths/profiles/wardj.html" style="color: #38761d">Justin Ward</a></author>,
+      <author><a href="https://www.di.ens.fr/~cchuang/" style="color: #38761d">Chien Chung-Huang</a></author>.
+      <br>
+      <conference>APPROX 2020</conference>.
 </p>
 
   </body>
