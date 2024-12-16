@@ -68,7 +68,7 @@
     border-radius: 5px;
     text-align: left;
     outline: none;
-    font-size: 1rem;
+    font-size: 1em;
     margin-bottom: 0.5rem;
     display: flex; /* Align icon and text */
     align-items: center;
@@ -89,13 +89,13 @@
 
   /* Icon Style */
   .icon {
-    font-size: 1.2rem;
-    transition: transform 0.3s ease; /* Smooth rotation for toggling */
+    font-size: 1.4rem;
+    transition: transform 0.4s ease; /* Smooth rotation for toggling */
   }
 
   /* Rotate the icon when active */
   .collapsible.active .icon {
-    transform: rotate(45deg); /* Changes "+" to "×" or rotates chevron */
+    transform: rotate(22.5deg); /* Changes "+" to "×" or rotates chevron */
   }
 
   /* Content Area (Hidden by Default) */
@@ -160,7 +160,7 @@
   </p>
 
 <p>
-  I work in combinatorial optimisation, and approximation algorithms. I am interested in these topics and more broadly in theoretical computer sciences. I am found of <em> maximization problems over independence systems</em>. This includes among others: k-Set Packing, Submodular Function Maximization, Matroid Intersection, and Matching.
+  I work in combinatorial optimisation, and approximation algorithms. I am interested in these topics and more broadly in theoretical computer sciences. I am found of <em> maximization problems over independence systems</em>. This includes among others: $k$-Set Packing, Submodular Function Maximization, Matroid Intersection, and Matching.
 </p>
 
 <p>
@@ -169,10 +169,6 @@
 <p>
   When I am not doing research you can find me playing Ultimate Frisbee with <a href="https://www.flyhigh.ultimate.ch/">FlyHigh Lausanne</a>.
 </p>
-  <p>
-    This is an example of Latex $p$.
-    Test $$p.$$
-  </p>
 
 
 <!-- <hr>
@@ -228,7 +224,7 @@
       <span class="icon">+</span>
         <span class="collapsible-text">
             <ptitle>
-              Asymptotically Optimal Hardness for $k$-Set Packing and k-Matroid Intersection
+              Asymptotically Optimal Hardness for $k$-Set Packing and $k$-Matroid Intersection
             </ptitle>
             <br>
             with
@@ -243,7 +239,7 @@
     <!-- Abstract -->
     <div class="content">
       <span class="collapsible-text">
-        For any $\varepsilon \geq 0$, we prove that $k$-Dimensional Matching is hard to approximate within a factor of $\Omega(k/(12 + \varepsilon))$ for large $k$ unless  $NP \subseteq BPP$. Listed in Karp's 21 $NP$-complete problems, $k$-Dimensional Matching is a benchmark computational complexity problem which we find as a special case of many constrained optimization problems over independence systems including: $k$-Set Packing, $k$-Matroid Intersection, and Matroid $k$-Parity.
+        For any $\varepsilon \geq 0$, we prove that $k$-Dimensional Matching is hard to approximate within a factor of $k/(12 + \varepsilon)$ for large $k$ unless  $NP \subseteq BPP$. Listed in Karp's 21 $NP$-complete problems, $k$-Dimensional Matching is a benchmark computational complexity problem which we find as a special case of many constrained optimization problems over independence systems including: $k$-Set Packing, $k$-Matroid Intersection, and Matroid $k$-Parity.
         <br>
         For all the aforementioned problems, the best known lower bound was a $\Omega(k / \ln (k))$-hardness by Hazan, Safra, and Schwartz. In contrast, state-of-the-art algorithms achieved an approximation of $O(k)$.
         Our result narrows down this gap to a constant and thus provides a rationale for the observed algorithmic difficulties. The crux of our result hinges on a novel approximation preserving gadget from $R$-degree bounded $k$-CSPs over alphabet size $R$ to $kR$-Dimensional Matching. Along the way, we prove that $R$-degree bounded $k$-CSPs over alphabet size $R$ are hard to approximate within a factor $\Omega_k(R)$ using known randomised sparsification methods for CSPs.
@@ -272,7 +268,7 @@
         <br>
         • Weighted $k$-Set Packing is a fundamental combinatorial optimization problem that captures matching problems in graphs and hypergraphs. For over 20 years Berman’s algorithm stood as the state-of-the-art approximation algorithm for this problem, until Neuwohner’s recent improvements. Our focus is on the value $k = 3$ which is well motivated from theory and practice, and for which improvements are arguably the hardest. We largely improve upon her approximation, by giving an algorithm that yields state-of-the-art results. Our techniques are simple and naturally expand upon Berman’s analysis. Our analysis holds for any value of $k$ with greater improvements over Berman’s result as k grows.
         <br>
-        • Chapter 3 – We continue the study of the weighted k-set packing problem. Building on Chapter 2, we reach the tightest approximation factor possible for $k = 3$, and $k \geq 7$  using our techniques. As a consequence, we improve over all the results in Chapter 2. In particular, we obtain $\sqrt{3}$, and $k/2$-approximation for $k = 3$   and $k \geq 7$ respectively. Our result for $k \geq 7$ is in fact analogous to that of Hurkens and Schrijver who obtained the same approximation factor for the unweighted problem.
+        • Chapter 3 – We continue the study of the weighted $k$-set packing problem. Building on Chapter 2, we reach the tightest approximation factor possible for $k = 3$, and $k \geq 7$  using our techniques. As a consequence, we improve over all the results in Chapter 2. In particular, we obtain $\sqrt{3}$, and $k/2$-approximation for $k = 3$   and $k \geq 7$ respectively. Our result for $k \geq 7$ is in fact analogous to that of Hurkens and Schrijver who obtained the same approximation factor for the unweighted problem.
         <br>
         • Chapter 4 – We present improved multipass streaming algorithms for maximizing monotone and arbitrary submodular functions over independence systems. Our result demonstrates that the simple local-search algorithm for maximizing a monotone submodular function can be efficiently simulated using a few passes over the dataset. Our results improve the number of passes needed compared to the state-of-the-art.
         <br>
@@ -288,7 +284,7 @@
     <span class="icon">+</span>
       <span class="collapsible-text">
         <ptitle>
-          An Improved Approximation for Maximum Weighted k-Set Packing
+          An Improved Approximation for Maximum Weighted $k$-Set Packing
 	      </ptitle>
         <br>
         with
